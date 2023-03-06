@@ -37,7 +37,7 @@ console.log("working...")
   }
 }
 
-export const DELETE = async () => {
+export const DELETE = async ({cookies}) => {
   cookies.set('session', '', {
     path: '/',
     expires: new Date(0),

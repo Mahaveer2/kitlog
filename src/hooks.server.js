@@ -1,10 +1,13 @@
 import admin from "firebase-admin";
+import { init } from "$lib/firebase-admin";
 
 export const handle = async ({ event, resolve }) => {
   // get cookies from browser
 
   const session = event.cookies.get("session");
   let user;
+
+  init();
 
   if (!session) {
     console.log("No session!");

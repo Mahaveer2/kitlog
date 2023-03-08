@@ -19,7 +19,7 @@
 
   const signOutUser = async () => {
       await request("/api/auth", "DELETE");
-      goto("/login");
+      window.location.replace("/login");
   };
 </script>
 <div>

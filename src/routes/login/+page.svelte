@@ -24,7 +24,7 @@
     );
     const idToken = userCredential._tokenResponse.idToken;
     await request("/api/auth", "POST", { idToken });
-    goto('/');
+    window.location.replace("/");
   };
 </script>
 

@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, setPersistence, inMemoryPersistence } from "firebase/auth"
-
+import { getFirestore } from "firebase/firestore";
 //TODO: add firebaes config
 const firebaseConfig = {
   apiKey: "AIzaSyDZ2GxzpdLyqICLXkyKm8lJJsIyq1pzO2w",
@@ -13,5 +13,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig, "CLIENT");
 export const auth = getAuth(app)
-
+export const db = getFirestore(app); 
 setPersistence(auth, inMemoryPersistence)
